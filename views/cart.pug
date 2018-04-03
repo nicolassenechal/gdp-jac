@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    script(src="/javascripts/jquery-3.3.1.min.js")
+    script(src="/javascripts/popper.min.js")
+    script(src="/javascripts/bootstrap.min.js")
+    script(src="/javascripts/cart.js")
+  body
+    block content
+    h1= title
+    div(class='dropdown')
+      button(type='button' class='btn btn-secondary dropdown-toggle' id="cust_id" data-toggle='dropdown', aria-haspopup='true' aria-expanded='false') Select Customer
+      div(class="dropdown-menu")
+        a(class="dropdown-item selected" id="DEFAULT" href='#') Guest user
+        a(class="dropdown-item" id="UNILEVER" href='#') Unilever
+        a(class="dropdown-item" id="APPLE" href='#') Apple
+        a(class="dropdown-item" id="NIKE" href='#') Nike
+        a(class="dropdown-item" id="FORD" href='#') Ford
+
+    p()
+
+    div(class="input-group mb-3")
+      div(class="input-group-prepred")
+        span(class="input-group-text" id='basic-addon3') Classic ads
+      input(type='text' class='form-control cart-item' id='CLS001')  
+
+    div(class="input-group mb-3")
+      div(class="input-group-prepred")
+        span(class="input-group-text" id='basic-addon3') Standout ads
+      input(type='text' class='form-control cart-item' id='STO001')
+  
+    div(class="input-group mb-3")
+      div(class="input-group-prepred")
+        span(class="input-group-text" id='basic-addon3') Premium ads
+      input(type='text' class='form-control cart-item' id='PRE001') 
+
+    buttoh(type="button" class="btn btn-lg" id="checkout") Checkout
+
+<!-- Modal -->
+  div(class="modal fade" id="checkout-modal" tabindex="-1" role="dialog" aria-labelledby="checkoutLabel" aria-hidden="true")
+    div(class="modal-dialog" role="document")
+      div(class="modal-content")
+        div(class="modal-header")
+          h5(class="modal-title" id="ModalLabel") Checkout
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+        div(id="modal-body") Result
+        div(class="modal-footer")
+        button(type="button" class="btn btn-secondary" data-dismiss="modal") Close

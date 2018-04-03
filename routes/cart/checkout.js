@@ -13,7 +13,7 @@ router.post('/', function (req, res, next) {
   }
   var cartRepo = new CartRepository(customerRepo)
 
-  var cartItems = req.body.cart_items
+  let cartItems = req.body.cart_items
 
   for (let sku in cartItems) {
     let qty = cartItems[sku]
@@ -24,11 +24,23 @@ router.post('/', function (req, res, next) {
 
   var cartService = new CartService(cartRepo)
   if (!cartService.checkOut()) {
-    res.send('Not Ok')
+    res.send('Error during the checkout process')
+  }
+
+  cartItems = cartService.getCartItems()
+  let returnItems = []
+  for (let cartItemId in cartItems) {
+    let item = cartItems[cartItemId]
+    returnItems.push({
+      sku: item.sku,
+      name: item.name,
+      price: item.price
+    })
   }
 
   res.send({
-    cartItems: cartService.getCartItems(),
+    body: req.body.cart_items,
+    cartItems: returnItems,
     total: cartService.getTotal()
   })
 })

@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/carts', cartRouter);
+app.use('/cart', cartRouter);
 app.use('/cart/checkout', checkoutRouter);
 
 // catch 404 and forward to error handler
@@ -42,5 +42,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3040, () => console.log('JobAds app listening on port 3000!'))
+app.listen(3000, () => console.log('JobAds app listening on port 3000!'))
 module.exports = app;
