@@ -48,7 +48,7 @@ class CartRepository {
     for (let cartItemId in this._cartItems) {
       amount = amount + this._cartItems[cartItemId].price
     }
-    return amount
+    return amount.toFixed(2)
   }
 
   clear () {

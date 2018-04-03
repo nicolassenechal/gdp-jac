@@ -31,12 +31,7 @@ $(function(){
     });
 
     if (!itemAdded) {
-      $('#modal-body').html(`
-        <div class="alert alert-info" role="alert">
-          <strong>Opps</strong> You seems forgot to enter the job ads quantity. :)
-        </div>     
-      `);
-      $('#checkout-modal').modal("show");
+      showInfo('<strong>Opps!</strong> You seems forgot to enter the job ads quantity. :)');
       return
     }
 
@@ -45,9 +40,21 @@ $(function(){
       url: '/cart/checkout',
       data: JSON.stringify(data),
       contentType: "application/json",
-      success: showCheckoutDetails
+      success: showCheckoutDetails,
+      error: function() {
+        showInfo('<strong>Opps!</strong> It seems there are some issues with the app...');
+      }
     });
   });
+
+  showInfo = function(msg) {
+    $('#modal-body').html(`
+      <div class="alert alert-info" role="alert">
+        ${msg}
+      </div>
+    `);
+  $('#checkout-modal').modal("show");
+  }
 
   showCheckoutDetails = function(res) {
   
