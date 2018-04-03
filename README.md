@@ -27,11 +27,19 @@ $ npm install --global mocha
 $ node tests/*
 ```
 
-## Deployment
+## Running the application
 
-run the application
-
-```
-$ node app.js //http://localhost:3000/cart
+* run the following command
 
 ```
+$ node app.js
+
+```
+
+* goto http://localhost:3000/cart and have Fun!
+
+Shopping Cart page
+![alt text](https://image.ibb.co/kqWH6c/Job_Ads_Cart.png)
+
+Checkout 
+![alt text](https://image.ibb.co/mm9FsH/Job_Ads_Checkout.png)
