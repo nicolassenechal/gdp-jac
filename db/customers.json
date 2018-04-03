@@ -1,0 +1,68 @@
+{   
+  "UNILEVER": {
+      "name": "Unilever",
+      "promotions": [
+        {
+          "type": "XY",
+          "freeQty": 1,
+          "minCartQty": 2,
+          "conditions": [
+            ["==", "sku", "CLS001"]
+          ]
+        }
+      ]
+   },
+   "APPLE": {
+    "name": "Apple",
+    "promotions": [
+      {
+        "type": "DIS",
+        "price": 299.99,
+        "minCartQty": 1,
+        "conditions": [
+          ["==", "sku", "STO001"]
+        ]
+      }
+    ]
+   },
+   "NIKE": {
+    "name": "Nike",
+    "promotions": [
+      {
+        "type": "DIS",
+        "price": 379.99,
+        "minCartQty": 4,
+        "conditions": [
+          ["==", "sku", "PRE001"]
+        ]
+      }
+    ]
+   },
+   "FORD": {
+    "name": "FORD",
+    "promotions": [
+      {
+        "type": "XY",
+        "freeQty": 1,
+        "minCartQty": 4,
+        "conditions": [
+          ["==", "sku", "CLS001"]
+        ]
+      }, {
+        "type": "DIS",
+        "price": 309.99,
+        "minCartQty": 1,
+        "conditions": [
+          ["==", "sku", "STO001"]
+        ]
+      }, {
+        "type": "DIS",
+        "price": 389.99,
+        "minCartQty": 3,
+        "conditions": [
+          ["==", "sku", "PRE001"]
+        ]
+      }
+    ]
+  }
+}

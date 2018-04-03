@@ -1,0 +1,17 @@
+{   
+  "CLS001": {
+      "name": "Classic Job Adverstisement",
+      "type": "CLASSIC",
+      "price": 269.99
+   },
+   "STO001": {
+    "name": "Standout Job Adverstisement",
+    "type": "STANDARD",
+    "price": 322.99
+   },
+   "PRE001": {
+    "name": "Premium Job Adverstisement",
+    "type": "PREMIUM",
+    "price": 394.99
+  }
+}
