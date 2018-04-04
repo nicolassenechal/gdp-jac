@@ -15,12 +15,12 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 $ node -v
 $ npm -v
-``
+```
 
 * Goto the project directory and Run the following to install dependancies packagess
 ```
 $ npm install
-``
+```
 
 ## Running the tests
 
