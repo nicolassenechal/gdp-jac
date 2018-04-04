@@ -17,7 +17,7 @@ $ node -v
 $ npm -v
 ```
 
-* Goto the project directory and Run the following to install dependancies packagess
+* Goto the project directory and run the following to install the dependancies packages
 ```
 $ npm install
 ```
